@@ -5,7 +5,7 @@ include conf/machine/include/autoload-filesystems.inc
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS = " \
 	xsarius-dvb-modules-${CHIPSET} \
-	xsarius-dvb-modules-$-shutdown \
+	xsarius-shutdown \
 "
 
 KERNEL_MODULE_AUTOLOAD += "xfs"
