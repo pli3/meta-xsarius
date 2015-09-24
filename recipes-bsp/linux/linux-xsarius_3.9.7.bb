@@ -20,6 +20,7 @@ RPROVIDES_kernel-image = "kernel-image-${KERNEL_VERSION}"
 
 SRC_URI += "http://en3homeftp.net/pub/src/linux-${PV}.tar.gz \
 		file://${CHIPSET}_defconfig \
+		file://001.local_bind_socket.patch \
 	"
 
 inherit kernel machine_kernel_pr

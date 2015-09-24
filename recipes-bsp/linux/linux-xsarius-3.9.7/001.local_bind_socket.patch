@@ -1,0 +1,18 @@
+diff --git a/net/unix/af_unix.c b/net/unix/af_unix.c
+index 4c773c8..f8517c7 100644
+--- a/net/unix/af_unix.c
++++ b/net/unix/af_unix.c
+@@ -857,11 +857,13 @@ static int unix_bind(struct socket *sock, struct sockaddr *uaddr, int addr_len)
+ 	unsigned int hash;
+ 	struct unix_address *addr;
+ 	struct hlist_head *list;
++#if 0
+     if(!strncmp(sunaddr->sun_path,"/tmp/.listen.camd.socket" ,sizeof("/tmp/.listen.camd.socket")))
+     {
+         sprintf(sunaddr->sun_path, "/tmp/.listen.camd.socket.ignore");
+         sun_path = sunaddr->sun_path;
+     }
++#endif
+ 
+ 	err = -EINVAL;
+ 	if (sunaddr->sun_family != AF_UNIX)
