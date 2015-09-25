@@ -46,7 +46,7 @@ IMAGE_CMD_ubi_append = " \
 	rm -rf update; \
 "
 
-MACHINE_FEATURES += "alsa usbhost wlan kernelwifi 3dtv switchoff osdposition hdmicec dvbusb"
+MACHINE_FEATURES += "dvb-c alsa usbhost wlan kernelwifi 3dtv switchoff osdposition hdmicec dvbusb"
 
 require conf/machine/include/tune-mips32.inc
 require conf/machine/include/xsarius-wifi.inc
