@@ -7,7 +7,7 @@ SRC_URI = " \
     file://turnoff_power \
     file://xsarius-shutdown.sh "
 
-INITSCRIPT_NAME = "xsaruys-shutdown"
+INITSCRIPT_NAME = "xsarius-shutdown"
 INITSCRIPT_PARAMS = "start 89 0 ."
 
 inherit autotools pkgconfig update-rc.d
