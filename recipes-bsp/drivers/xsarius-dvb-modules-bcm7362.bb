@@ -7,7 +7,7 @@ KV = "3.9.7"
 KV_EXTRA = ""
 PV = "${KV}+${SRCDATE}"
 
-SRCDATE = "20150918"
+SRCDATE = "20151006"
 
 SRC_URI = "http://en3homeftp.net/release/images/oedrivers/bcmlinuxdvb_7362-${KV}-${SRCDATE}.tar.gz"
 
@@ -33,5 +33,5 @@ do_install() {
         done
 }
 
-SRC_URI[md5sum] = "0db0d1d970d97e1800ee9cf35052604e"
-SRC_URI[sha256sum] = "9f48575da41444e13111d0745bb256d91986039c5dea839d18610c9c79d5d418"
+SRC_URI[md5sum] = "dd5a372de9cc7c243be0d9414cad01cf"
+SRC_URI[sha256sum] = "51fb8311521959e4ab9f30112f585b416e5958df8b273e3a3b24bae069cebbe2"
