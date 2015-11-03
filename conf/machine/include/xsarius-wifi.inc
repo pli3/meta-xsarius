@@ -16,8 +16,8 @@ MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += " \
 	kernel-module-rtl8187 \
 	kernel-module-zd1211rw \
 	\
-	rtl8192cu \
-	rtl8188eu \
+	kernel-module-rtl8188eu \
+	kernel-module-rtl8192cu \
 	\
 	firmware-rtl8192cu \
 "

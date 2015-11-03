@@ -6,6 +6,7 @@ include conf/machine/include/autoload-filesystems.inc
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS = " \
 	xsarius-dvb-modules-${CHIPSET} \
 	xsarius-shutdown \
+	ntfs-3g \
 "
 
 KERNEL_MODULE_AUTOLOAD += "xfs"
@@ -21,7 +22,7 @@ DEFAULTTUNE = "mips32el"
 DVBMEDIASINK_CONFIG = "--with-wmv --with-pcm --with-dts"
 
 PREFERRED_PROVIDER_virtual/kernel = "linux-xsarius"
-PREFERRED_VERSION_linux-xsarius = "3.9.7"
+PREFERRED_VERSION_linux-xsarius = "4.2.1"
 
 IMAGE_FSTYPES ?= "ubi"
 
