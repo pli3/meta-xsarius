@@ -5,13 +5,13 @@ LICENSE = "CLOSED"
 
 PACKAGE_ARCH = "${MACHINEBUILD}"
 
-SRCDATE = "20151103"
+SRCDATE = "20151210"
 KV = "4.2.1"
 PV = "${KV}+${SRCDATE}"
 PR = "r2"
 
-SRC_URI[md5sum] = "d67514573a406ae213e6abd2f7020196"
-SRC_URI[sha256sum] = "b79da6abc612076c8a61aea3e10f5794f6d1c4c3bf5ccfebbe087ab543c0b4d3"
+SRC_URI[md5sum] = "63388632e114b17237f48e2016ef119d"
+SRC_URI[sha256sum] = "ff779a6d39c8dd6d760677e5d2947c319311a6b5db418062ddf4a301e3b0b71f"
 
 SRC_URI = "http://en3homeftp.net/release/images/oedrivers/bcmlinuxdvb_7362-${KV}-${SRCDATE}.tar.gz"
 
