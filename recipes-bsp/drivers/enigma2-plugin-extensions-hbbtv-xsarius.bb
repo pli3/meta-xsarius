@@ -1,4 +1,4 @@
-DESCRIPTION = "HbbTv"
+DESCRIPTION = "Xsarius HbbTv"
 LICENSE = "GPLv2"
 
 LIC_FILES_CHKSUM = "file://README.md;md5=4a881119de8945a8b2ca1da5e5ca1f58"
