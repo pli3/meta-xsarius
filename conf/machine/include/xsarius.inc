@@ -5,6 +5,7 @@ include conf/machine/include/autoload-filesystems.inc
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS = " \
 	xsarius-dvb-modules-${CHIPSET} \
+	xsarius-kernel-params \
 	xsarius-shutdown \
 	ntfs-3g \
 "
