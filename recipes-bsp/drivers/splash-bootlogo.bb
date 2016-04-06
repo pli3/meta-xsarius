@@ -2,7 +2,7 @@ DESCRIPTION = "first bootlogo splash image"
 SECTION = "base"
 PRIORITY = "required"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
-COMPATIBLE_MACHINE = "fusion"
+COMPATIBLE_MACHINE = "${MACHINE}"
 
 require conf/license/openpli-gplv2.inc
 
