@@ -1,10 +1,10 @@
-DESCRIPTION = "enigma2-plugin-extensions-hbbtv"
+DESCRIPTION = "vuplus opera browser util"
 LICENSE = "CLOSED"
 
 SRCREV = "${AUTOREV}"
 PR = "r1"
 
-SRC_URI = "git://github.com/pli3/enigma2-plugin-extensions-hbbtv-xsarius.git"
+SRC_URI = "git://github.com/pli3/xsarius-opera-browser.git"
 
 EXTRA_OECONF = " \
     BUILD_SYS=${BUILD_SYS} \
@@ -18,15 +18,15 @@ ALLOW_EMPTY_${PN} = "1"
 S = "${WORKDIR}/git"
 DEPLOY_DIR = "${TMPDIR}/deploy"
 
-ENIGMA2_PLUGIN_EXTENSIONS_HBBTV = " \
-	enigma2-plugin-extensions-hbbtv-xsarius_git8507+077f312-r0_mips32el.ipk \
+XSARIUS_OPERA_BROWSER = " \
+	xsarius-opera-browser_1.0-r1_mips32el.ipk \
 "
 
 do_install() {
 }
 python populate_packages_prepend () {
     p = ""
-    plugins = bb.data.getVar('ENIGMA2_PLUGIN_EXTENSIONS_HBBTV', d, 1)
+    plugins = bb.data.getVar('XSARIUS_OPERA_BROWSER', d, 1)
 
     if plugins is not None:
         for package in plugins.split():
@@ -38,7 +38,7 @@ python populate_packages_prepend () {
 do_deploy() {
     install -d 0755 ${WORKDIR}/deploy-ipk/mips32el
 
-    for i in ${ENIGMA2_PLUGIN_EXTENSIONS_HBBTV}; do
+    for i in ${VUPLUS_OPERA_BROWSER}; do
         if [ -f $i ]; then
             install -m 0644 $i ${WORKDIR}/deploy-ipk/mips32el;
             install -m 0644 $i ${DEPLOY_DIR}/ipk/mips32el;

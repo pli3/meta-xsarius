@@ -16,8 +16,9 @@ MACHINE_EXTRA_RRECOMMENDS = " \
 	xsarius-gst-plugin-dvbmediasink \
 	splash-bootlogo \
 	enigma2-plugin-extensions-hbbtv-xsarius \
-	hbbtv-browser \
-	opera-dumpait \
+	xsarius-opera-browser \
+	xsarius-opera-dumpait \
+	bcm \
 "
 
 TARGET_ARCH = "mipsel"
