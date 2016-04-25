@@ -38,7 +38,7 @@ python populate_packages_prepend () {
 do_deploy() {
     install -d 0755 ${WORKDIR}/deploy-ipk/mips32el
 
-    for i in ${VUPLUS_OPERA_BROWSER}; do
+    for i in ${XSARIUS_OPERA_BROWSER}; do
         if [ -f $i ]; then
             install -m 0644 $i ${WORKDIR}/deploy-ipk/mips32el;
             install -m 0644 $i ${DEPLOY_DIR}/ipk/mips32el;
