@@ -10,8 +10,8 @@ KV = "4.2.1"
 PV = "${KV}+${SRCDATE}"
 PR = "r2"
 
-SRC_URI[md5sum] = "b16ce6ea162c78d2834c60a026598681"
-SRC_URI[sha256sum] = "9f97401695f670393b76bc719285fa47fd94f61a435d4edd4685b4c5bfb61960"
+SRC_URI[md5sum] = "2a931b7e290fe312fd442dbc85ff276f"
+SRC_URI[sha256sum] = "0081b81602b89c1e8a2953e2e17c7d35b0be21b8a174e0602b31e9c444ecf32e"
 
 SRC_URI = "http://en3homeftp.net/release/images/oedrivers/bcmlinuxdvb_7362-${KV}-${SRCDATE}.tar.gz"
 
