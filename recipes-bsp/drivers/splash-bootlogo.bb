@@ -4,8 +4,6 @@ PRIORITY = "required"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 COMPATIBLE_MACHINE = "fusion|purehd"
 
-COMPATIBLE_MACHINE = "fusion"
-
 require conf/license/openpli-gplv2.inc
 
 PV = "1.0"
