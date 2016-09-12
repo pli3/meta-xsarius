@@ -22,6 +22,7 @@ S = "${WORKDIR}/linux-${KV}"
 export OS = "Linux"
 KERNEL_OBJECT_SUFFIX = "ko"
 KERNEL_OUTPUT = "vmlinux"
+KERNEL_OUTPUT_DIR = "."
 KERNEL_IMAGETYPE = "vmlinux"
 KERNEL_IMAGEDEST = "/tmp"
 
