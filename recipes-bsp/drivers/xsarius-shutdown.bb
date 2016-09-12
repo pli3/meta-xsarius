@@ -12,6 +12,9 @@ INITSCRIPT_PARAMS = "start 89 0 ."
 
 inherit autotools pkgconfig update-rc.d
 
+do_compile() {
+}
+
 do_install() {
     install -d ${D}/etc/init.d/
     install -m 0755 ${WORKDIR}/xsarius-shutdown.sh ${D}/etc/init.d/xsarius-shutdown
