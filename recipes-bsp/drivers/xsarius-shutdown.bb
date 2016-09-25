@@ -10,10 +10,7 @@ SRC_URI = " \
 INITSCRIPT_NAME = "xsarius-shutdown"
 INITSCRIPT_PARAMS = "start 89 0 ."
 
-inherit autotools pkgconfig update-rc.d
-
-do_compile() {
-}
+inherit pkgconfig update-rc.d
 
 do_install() {
     install -d ${D}/etc/init.d/
