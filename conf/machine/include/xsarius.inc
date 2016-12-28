@@ -41,17 +41,17 @@ IMGDEPLOYDIR ?= "${DEPLOY_DIR_IMAGE}"
 IMAGE_CMD_ubi_prepend = " \
         mkfs.jffs2 --root=${IMAGE_ROOTFS}/boot --faketime \
         --disable-compressor=lzo --compression-mode=size \
-        --output=${IMGDEPLOYDIR}/${IMAGE_NAME}.boot.jffs2 \
+        --output=${DEPLOY_DIR_IMAGE}/${IMAGE_NAME}.boot.jffs2 \
         ${EXTRA_IMAGECMD_COMPAT}; rm -rf ${IMAGE_ROOTFS}/boot/; \
 "
 
 IMAGE_CMD_ubi_append = " \
 	mkdir -p ${IMGDEPLOYDIR}/${IMAGEDIR}/; \
 	cp -f ${IMGDEPLOYDIR}/${IMAGE_NAME}.rootfs.ubi ${IMGDEPLOYDIR}/${IMAGEDIR}/oe_rootfs.bin; \
-	cp -f ${IMGDEPLOYDIR}/${MACHINE}_splash.bmp ${IMGDEPLOYDIR}/${IMAGEDIR}/splash.bmp; \
-	cp -f ${IMGDEPLOYDIR}/${MACHINE}_splash1.bmp ${IMGDEPLOYDIR}/${IMAGEDIR}/splash1.bmp; \
-	cp -f ${IMGDEPLOYDIR}/${MACHINE}_splash2.bmp ${IMGDEPLOYDIR}/${IMAGEDIR}/splash2.bmp; \
-	cp -f ${IMGDEPLOYDIR}/${MACHINE}_splash3.bmp ${IMGDEPLOYDIR}/${IMAGEDIR}/splash3.bmp; \
+	cp -f ${DEPLOY_DIR_IMAGE}/${MACHINE}_splash.bmp ${IMGDEPLOYDIR}/${IMAGEDIR}/splash.bmp; \
+	cp -f ${DEPLOY_DIR_IMAGE}/${MACHINE}_splash1.bmp ${IMGDEPLOYDIR}/${IMAGEDIR}/splash1.bmp; \
+	cp -f ${DEPLOY_DIR_IMAGE}/${MACHINE}_splash2.bmp ${IMGDEPLOYDIR}/${IMAGEDIR}/splash2.bmp; \
+	cp -f ${DEPLOY_DIR_IMAGE}/${MACHINE}_splash3.bmp ${IMGDEPLOYDIR}/${IMAGEDIR}/splash3.bmp; \
 	gzip -9c ${DEPLOY_DIR_IMAGE}/vmlinux-${MACHINE}.bin > ${IMGDEPLOYDIR}/${IMAGEDIR}/oe_kernel.bin; \
 	cd ${IMGDEPLOYDIR}; \
 	zip ${IMAGE_NAME}_usb.zip ${IMAGEDIR}/*; \
