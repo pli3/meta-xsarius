@@ -22,6 +22,10 @@ MACHINE_EXTRA_RRECOMMENDS = " \
 	bcm \
 "
 
+EXTRA_IMAGEDEPENDS = " \
+	splash-bootlogo \
+"
+
 TARGET_ARCH = "mipsel"
 DEFAULTTUNE = "mips32el"
 
