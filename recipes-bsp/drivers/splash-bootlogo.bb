@@ -12,8 +12,8 @@ PR = "r0"
 S = "${WORKDIR}/"
 
 SRC_URI = " \
-        ${@base_contains("MACHINE", "fusion4k", "file://${MACHINE}_splash.bmp", " \
-        file://${MACHINE}_splash.bmp \
+	${@base_contains("MACHINE", "fusion4k", "file://${MACHINE}_splash.bmp", " \
+	file://${MACHINE}_splash.bmp \
 	file://${MACHINE}_splash1.bmp \
 	file://${MACHINE}_splash2.bmp \
 	file://${MACHINE}_splash3.bmp", d)} \
@@ -21,15 +21,10 @@ SRC_URI = " \
 
 inherit deploy
 
+ALLOW_EMPTY_${PN} = "1"
+
 do_deploy() {
-}
-
-do_install() {
-	if [ ! -d "${DEPLOY_DIR_IMAGE}" ];then
-		mkdir -p ${DEPLOY_DIR_IMAGE}
-	fi
-
-	install -m 0644 ${WORKDIR}/*.bmp ${DEPLOY_DIR_IMAGE}
+	install -m 0644 ${WORKDIR}/*.bmp ${DEPLOYDIR}
 }
 
 addtask deploy before do_build
