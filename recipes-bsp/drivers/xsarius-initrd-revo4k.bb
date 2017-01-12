@@ -5,5 +5,5 @@ do_install() {
     install -m 0755 ${WORKDIR}/vmlinuz-initrd-7439b0 ${D}/boot/initrd_run.bin
 }
 
-SRC_URI[md5sum] = "3b07468cf880a09081d6256867492103"
-SRC_URI[sha256sum] = "89b486736457c14f75984cfe3c8bb236d4a1a51771085992fea7344876daf163"
+SRC_URI[md5sum] = "c2a70c90aec8623f148a451b9a1f9eec"
+SRC_URI[sha256sum] = "39cea89f80c732961bfd090b190b7f3d4f54b6379807cabd34ca6a0a89d6890f"

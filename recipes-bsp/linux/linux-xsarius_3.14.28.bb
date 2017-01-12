@@ -17,6 +17,7 @@ SRC_URI = "http://en3homeftp.net/pub/src/linux-${KV}.tar.xz \
         file://bcm_genet_disable_warn.patch \
         file://0001.remove_vtuner_index_check.patch \
 	file://rtl8712_fix_build_error.patch \
+        file://kernel-gcc6.patch \	
         file://defconfig \
         "
 
@@ -58,4 +59,4 @@ pkg_postrm_kernel-image () {
 
 MACHINE_KERNEL_PR_append = "${PR_INC}.0"
 
-COMPATIBLE_MACHINE = "fusion4k"
+COMPATIBLE_MACHINE = "revo4k"
