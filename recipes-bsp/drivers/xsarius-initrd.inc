@@ -4,7 +4,7 @@ PRIORITY = "required"
 
 PR = "r7"
 
-SRCDATE = "20170106"
+SRCDATE = "20170112"
 
 SRC_URI = "http://en3homeftp.net/pub/down/vmlinuz-initrd_${MACHINE}_${SRCDATE}.tar.gz"
 
