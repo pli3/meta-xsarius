@@ -59,4 +59,4 @@ pkg_postrm_kernel-image () {
 
 MACHINE_KERNEL_PR_append = "${PR_INC}.0"
 
-COMPATIBLE_MACHINE = "fusion4k"
+COMPATIBLE_MACHINE = "revo4k"
