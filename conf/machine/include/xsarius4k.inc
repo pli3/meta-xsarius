@@ -31,19 +31,18 @@ PREFERRED_PROVIDER_virtual/kernel = "linux-xsarius"
 IMAGE_FSTYPES ?= "tar.bz2"
 
 IMAGEDIR ?= "${MACHINE}"
-IMGDEPLOYDIR ?= "${DEPLOY_DIR_IMAGE}"
 
 IMAGE_CMD_tar_prepend = " \
-	mkdir -p ${IMGDEPLOYDIR}/update/${UPDATE_DIR}/; \
-        cp -f ${IMGDEPLOYDIR}/${MACHINE}_splash.bmp ${IMGDEPLOYDIR}/update/${UPDATE_DIR}/splash.bmp; \
-        cp ${IMAGE_ROOTFS}/tmp/zImage ${IMGDEPLOYDIR}/update/${MACHINE}/oe_kernel.bin; \
-        cp ${IMAGE_ROOTFS}/boot/initrd_run.bin ${IMGDEPLOYDIR}/update/${UPDATE_DIR}/initrd_run.bin; \
+	mkdir -p ${DEPLOY_DIR_IMAGE}/update/${UPDATE_DIR}/; \
+        cp -f ${DEPLOY_DIR_IMAGE}/${MACHINE}_splash.bmp ${DEPLOY_DIR_IMAGE}/update/${UPDATE_DIR}/splash.bmp; \
+        cp ${IMAGE_ROOTFS}/tmp/zImage ${DEPLOY_DIR_IMAGE}/update/${MACHINE}/oe_kernel.bin; \
+        cp ${IMAGE_ROOTFS}/boot/initrd_run.bin ${DEPLOY_DIR_IMAGE}/update/${UPDATE_DIR}/initrd_run.bin; \
         rm -rf ${IMAGE_ROOTFS}/tmp/zImage; \
         rm -rf ${IMAGE_ROOTFS}/boot/initrd_run.bin; \
-        tar -cvf ${IMGDEPLOYDIR}/rootfs.tar -C ${IMAGE_ROOTFS} .; \
-        mv ${IMGDEPLOYDIR}/rootfs.tar ${IMGDEPLOYDIR}/update/${UPDATE_DIR}/rootfs.tar; \
-        bzip2 ${IMGDEPLOYDIR}/update/${MACHINE}/rootfs.tar; \
-        cd ${IMGDEPLOYDIR}; \
+        tar -cvf ${DEPLOY_DIR_IMAGE}/rootfs.tar -C ${IMAGE_ROOTFS} .; \
+        mv ${DEPLOY_DIR_IMAGE}/rootfs.tar ${DEPLOY_DIR_IMAGE}/update/${UPDATE_DIR}/rootfs.tar; \
+        bzip2 ${DEPLOY_DIR_IMAGE}/update/${MACHINE}/rootfs.tar; \
+        cd ${DEPLOY_DIR_IMAGE}; \
         zip ${IMAGE_NAME}_usb.zip update/${UPDATE_DIR}/*; \
         rm -rf update; \
 "
