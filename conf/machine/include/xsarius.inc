@@ -13,7 +13,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS = " \
 KERNEL_MODULE_AUTOLOAD += "xfs"
 
 MACHINE_EXTRA_RRECOMMENDS = " \
-	${@base_contains("DISTRO_VERSION", "4", "xsarius-gst-plugin-dvbmediasink", " \
+	${@bb.utils.contains("DISTRO_VERSION", "4", "xsarius-gst-plugin-dvbmediasink", " \
 	gstreamer1.0-plugin-xsarius-dvbmediasink gstreamer1.0-libav", d)} \
 	splash-bootlogo \
 	enigma2-plugin-extensions-hbbtv-xsarius \
