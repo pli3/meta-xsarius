@@ -12,7 +12,7 @@ PR = "r0"
 S = "${WORKDIR}/"
 
 SRC_URI = " \
-	${@base_contains("MACHINE", "revo4k", "file://${MACHINE}_splash.bmp", " \
+	${@bb.utils.contains("MACHINE", "revo4k", "file://${MACHINE}_splash.bmp", " \
 	file://${MACHINE}_splash.bmp \
 	file://${MACHINE}_splash1.bmp \
 	file://${MACHINE}_splash2.bmp \
