@@ -1,6 +1,9 @@
 # We know about rtc
 MACHINE_FEATURES_BACKFILL_CONSIDERED = "rtc"
 
+TARGET_ARCH = "arm"
+DEFAULTTUNE = "armv7ahf-neon"
+
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS = " \
 	${@bb.utils.contains("GST_VERSION", "1.0", "gstreamer1.0-libav", "gst-ffmpeg", d)} \
         xsarius-initrd-${MACHINE} \
@@ -13,14 +16,12 @@ KERNEL_MODULE_AUTOLOAD += "xfs"
 MACHINE_EXTRA_RRECOMMENDS = " \
 	xsarius-gstreamer1.0-plugin-dvbmediasink \
 	ntfs-3g \
+        xsarius-libgles-${TARGET_ARCH} \
 "
 
 EXTRA_IMAGEDEPENDS += "\
                    splash-bootlogo \
 "
-
-TARGET_ARCH = "arm"
-DEFAULTTUNE = "armv7ahf-neon"
 
 DVBMEDIASINK_CONFIG = "--with-dags --with-pcm --with-eac3 --with-amr --with-wmv --with-vb6 --with-vb8 --with-spark --with-h265"
 
