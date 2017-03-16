@@ -16,7 +16,6 @@ KERNEL_MODULE_AUTOLOAD += "xfs"
 MACHINE_EXTRA_RRECOMMENDS = " \
 	xsarius-gstreamer1.0-plugin-dvbmediasink \
 	ntfs-3g \
-        xsarius-libgles-${TARGET_ARCH} \
 "
 
 EXTRA_IMAGEDEPENDS += "\
