@@ -9,6 +9,9 @@ PV = "${KV}+${SRCDATE}"
 
 SRCDATE = "20170321"
 
+# @description : model_size is 200mm and 300mm.
+# ex) bcmlinuxdvb_7252S-200mm-3.14.28-20161130.tar.gz.
+# only 2 case. ( 200mm and 300mm )
 
 SRC_URI = "http://en3homeftp.net/release/images/oedrivers/bcmlinuxdvb_${CHIP}-${MODEL_SIZE}-${KV}-${SRCDATE}.tar.gz"
 
