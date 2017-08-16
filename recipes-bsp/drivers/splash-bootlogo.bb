@@ -27,4 +27,5 @@ do_deploy() {
 	install -m 0644 ${WORKDIR}/*.bmp ${DEPLOYDIR}
 }
 
+addtask deploy after do_unpack
 addtask deploy before do_build
