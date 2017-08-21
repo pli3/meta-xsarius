@@ -14,7 +14,7 @@ PACKAGES += " ${PN}-src"
 
 DEPENDS = "libdvbsi++"
 
-SRC_URI = "git://github.com/pli3/xsarius-opera-dumpait.git;protocol=http"
+SRC_URI = "git://github.com/pli3/xsarius-opera-dumpait.git;protocol=git"
 
 S = "${WORKDIR}/git"
 DESTDIR = "enigma2/python/Plugins/Extensions/HbbTV"
